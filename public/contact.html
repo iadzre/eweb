@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | EWEB</title>
+  
+  <!-- Tailwind CSS via CDN (for development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+  <!-- Header -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/images/eweb-logo.png" alt="EWEB Logo" class="h-10 transition-transform group-hover:scale-105">
+      </a>
+      
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="about.html" class="text-dark hover:text-secondary font-medium transition-colors">About</a>
+        <a href="programs.html" class="text-dark hover:text-secondary font-medium transition-colors">Programs</a>
+        <a href="resources.html" class="text-dark hover:text-secondary font-medium transition-colors">Resources</a>
+        <a href="gallery.html" class="text-dark hover:text-secondary font-medium transition-colors">Gallery</a>
+        <a href="contact.html" class="text-dark hover:text-secondary font-medium transition-colors">Contact</a>
+        <a href="get-involved.html#donate" class="ml-4 bg-secondary hover:bg-secondary-dark text-dark font-semibold px-6 py-2 rounded-full text-sm tracking-wide transition-all hover:shadow-lg">Donate</a>
+      </nav>
+      
+      <button class="md:hidden text-2xl text-primary" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg">
+      <div class="flex flex-col space-y-4">
+        <a href="about.html" class="block py-2 hover:text-secondary">About</a>
+        <a href="programs.html" class="block py-2 hover:text-secondary">Programs</a>
+        <a href="resources.html" class="block py-2 hover:text-secondary">Resources</a>
+        <a href="gallery.html" class="block py-2 hover:text-secondary">Gallery</a>
+        <a href="contact.html" class="block py-2 hover:text-secondary">Contact</a>
+        <a href="get-involved.html#donate" class="mt-2 block bg-secondary text-dark font-bold py-2 px-4 rounded-full text-center">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-primary/90 bg-cover bg-center overflow-hidden" style="background-image: url('assets/images/hero-bg.jpg')">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90"></div>
+    <div class="container mx-auto px-4 sm:px-6 text-center text-white relative z-10">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance scroll-reveal">
+        Contact Us
+      </h1>
+      <p class="text-lg max-w-2xl mx-auto tracking-wide text-white/90 scroll-reveal">
+        Get in touch with our team - we're here to help
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <!-- Contact Methods -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="font-heading text-2xl font-bold mb-6 tracking-wide">Contact Details</h2>
+            <div class="space-y-6">
+              <!-- Email -->
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-primary mt-1 mr-4"></i>
+                <div>
+                  <a href="mailto:info@eweb.org" class="text-primary hover:text-primary-dark transition-colors">info@eweb.org</a>
+                  <p class="text-gray-500 text-sm mt-1">Response within 24 hours</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start">
+                <i class="fas fa-phone text-primary mt-1 mr-4"></i>
+                <div>
+                  <a href="tel:+11234567890" class="text-primary hover:text-primary-dark transition-colors">(123) 456-7890</a>
+                  <p class="text-gray-500 text-sm mt-1">Mon-Fri, 9am-5pm EST</p>
+                </div>
+              </div>
+
+              <!-- Office -->
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-primary mt-1 mr-4"></i>
+                <div>
+                  <address class="text-gray-600 not-italic">
+                    123 Health St, Suite 100<br>
+                    New York, NY 10001
+                  </address>
+                  <p class="text-gray-500 text-sm mt-1">By appointment only</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="font-heading text-xl font-bold mb-4 tracking-wide">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold mb-6 tracking-wide">Send a Message</h2>
+          <form id="contactForm" class="space-y-6" onsubmit="return handleSubmit(event)">
+            <div>
+              <input type="text" name="firstName" placeholder="First Name" class="w-full px-4 py-3 border-b border-gray-300 focus:border-primary focus:outline-none transition-colors" required>
+            </div>
+            <div>
+              <input type="text" name="lastName" placeholder="Last Name" class="w-full px-4 py-3 border-b border-gray-300 focus:border-primary focus:outline-none transition-colors" required>
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email" class="w-full px-4 py-3 border-b border-gray-300 focus:border-primary focus:outline-none transition-colors" required>
+            </div>
+            <div>
+              <select name="subject" class="w-full px-4 py-3 border-b border-gray-300 focus:border-primary focus:outline-none transition-colors" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="program">Program Information</option>
+                <option value="support">Support Request</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <textarea name="message" rows="4" placeholder="Your message" class="w-full px-4 py-3 border-b border-gray-300 focus:border-primary focus:outline-none transition-colors" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg transition-colors">
+              Send Message
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 text-green-700 text-center">
+            <p>Thank you for your message! We'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-white rounded-lg overflow-hidden">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076994379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1586000412513!5m2!1sen!2sus" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            class="w-full h-[450px]"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading text-2xl font-bold mb-8 tracking-wide">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <!-- FAQ Items -->
+          <div class="border-b border-gray-200">
+            <button class="w-full py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
+              <div class="flex justify-between items-center">
+                <h3 class="font-heading font-medium tracking-wide">How can I enroll in your programs?</h3>
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div class="faq-content pb-4 hidden">
+              <p class="text-gray-600">You can enroll in our programs through our website or by contacting our team directly. We'll guide you through the enrollment process and help you choose the right program for your needs.</p>
+            </div>
+          </div>
+
+          <div class="border-b border-gray-200">
+            <button class="w-full py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
+              <div class="flex justify-between items-center">
+                <h3 class="font-heading font-medium tracking-wide">Are your programs available online?</h3>
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div class="faq-content pb-4 hidden">
+              <p class="text-gray-600">Yes, many of our programs are available online through virtual classes and resources. We also offer in-person programs in select locations.</p>
+            </div>
+          </div>
+
+          <div class="border-b border-gray-200">
+            <button class="w-full py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
+              <div class="flex justify-between items-center">
+                <h3 class="font-heading font-medium tracking-wide">How can I support your organization?</h3>
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div class="faq-content pb-4 hidden">
+              <p class="text-gray-600">There are many ways to support our organization, including volunteering, making a donation, or becoming a partner. Visit our Get Involved page to learn more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-20 pb-8">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="scroll-reveal">
+          <a href="index.html">
+            <img src="assets/images/eweb-logo-white.png" alt="EWEB Logo" class="h-10 mb-6">
+          </a>
+          <p class="mb-6 text-white/70 text-sm tracking-wide leading-relaxed">
+            Empowering women through health education worldwide.
+          </p>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Home</a></li>
+            <li><a href="about.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">About Us</a></li>
+            <li><a href="programs.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Programs</a></li>
+            <li><a href="resources.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Resources</a></li>
+            <li><a href="get-involved.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Get Involved</a></li>
+            <li><a href="contact.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">info@eweb.org</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">(123) 456-7890</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">123 Health St, Suite 100<br>New York, NY 10001</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">Mon-Fri, 9am-5pm EST</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Newsletter</h4>
+          <p class="text-white/80 mb-4">
+            Subscribe for health tips and updates.
+          </p>
+          <form class="flex group">
+            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-dark focus:outline-none focus:ring-2 focus:ring-secondary transition-all">
+            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-4 rounded-r transition-all group-hover:shadow-lg">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60 text-sm">
+          &copy; 2023 Every Woman Every Baby Inc. All rights reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-white/60 hover:text-secondary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/60 hover:text-secondary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

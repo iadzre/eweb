@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | EWEB</title>
+  
+  <!-- Tailwind CSS via CDN (for development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+  <!-- Header -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/images/eweb-logo.png" alt="EWEB Logo" class="h-10 transition-transform group-hover:scale-105">
+      </a>
+      
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="about.html" class="text-dark hover:text-secondary font-medium transition-colors">About</a>
+        <a href="programs.html" class="text-dark hover:text-secondary font-medium transition-colors">Programs</a>
+        <a href="resources.html" class="text-dark hover:text-secondary font-medium transition-colors">Resources</a>
+        <a href="gallery.html" class="text-dark hover:text-secondary font-medium transition-colors">Gallery</a>
+        <a href="contact.html" class="text-dark hover:text-secondary font-medium transition-colors">Contact</a>
+        <a href="get-involved.html#donate" class="ml-4 bg-secondary hover:bg-secondary-dark text-dark font-semibold px-6 py-2 rounded-full text-sm tracking-wide transition-all hover:shadow-lg">Donate</a>
+      </nav>
+      
+      <button class="md:hidden text-2xl text-primary" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg">
+      <div class="flex flex-col space-y-4">
+        <a href="about.html" class="block py-2 hover:text-secondary">About</a>
+        <a href="programs.html" class="block py-2 hover:text-secondary">Programs</a>
+        <a href="resources.html" class="block py-2 hover:text-secondary">Resources</a>
+        <a href="gallery.html" class="block py-2 hover:text-secondary">Gallery</a>
+        <a href="contact.html" class="block py-2 hover:text-secondary">Contact</a>
+        <a href="get-involved.html#donate" class="mt-2 block bg-secondary text-dark font-bold py-2 px-4 rounded-full text-center">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-primary/90 bg-cover bg-center overflow-hidden" style="background-image: url('assets/images/hero-bg.jpg')">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90"></div>
+    <div class="container mx-auto px-4 sm:px-6 text-center text-white relative z-10">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance scroll-reveal">
+        Gallery
+      </h1>
+      <p class="text-lg max-w-2xl mx-auto tracking-wide text-white/90 scroll-reveal">
+        Explore our events, workshops, and community moments
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button class="filter-btn active px-6 py-2 text-primary font-medium border-b-2 border-primary transition-colors" data-filter="all">All</button>
+        <button class="filter-btn px-6 py-2 text-primary font-medium border-b-2 border-transparent hover:border-primary transition-colors" data-filter="events">Events</button>
+        <button class="filter-btn px-6 py-2 text-primary font-medium border-b-2 border-transparent hover:border-primary transition-colors" data-filter="workshops">Workshops</button>
+        <button class="filter-btn px-6 py-2 text-primary font-medium border-b-2 border-transparent hover:border-primary transition-colors" data-filter="team">Team</button>
+        <button class="filter-btn px-6 py-2 text-primary font-medium border-b-2 border-transparent hover:border-primary transition-colors" data-filter="community">Community</button>
+        <button class="filter-btn px-6 py-2 text-primary font-medium border-b-2 border-transparent hover:border-primary transition-colors" data-filter="video">Videos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="gallery-grid">
+        <!-- Project 1: Postpartum Health Education -->
+        <div class="project-card scroll-reveal" data-category="events">
+          <div class="project-header">
+            <h3 class="font-heading">Postpartum Health Education Program</h3>
+            <p>Comprehensive workshops and events focused on postpartum recovery and maternal wellness, supporting new mothers through their journey.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-cover gallery-item" data-type="image">
+              <img src="assets/images/postpartum-program.jpg" alt="Postpartum Health Education Program" loading="lazy">
+            </div>
+            <div class="project-caption">
+              <h3 class="font-heading">Postpartum Health Education Program</h3>
+              <p>Comprehensive workshops and events focused on postpartum recovery and maternal wellness</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Child Care Workshops -->
+        <div class="project-card scroll-reveal" data-category="workshops">
+          <div class="project-header">
+            <h3 class="font-heading">Child Care Education Workshops</h3>
+            <p>Educational sessions providing parents with essential knowledge about newborn care, feeding, sleep patterns, and infant development.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-cover gallery-item" data-type="image">
+              <img src="assets/images/childcare-program.jpg" alt="Child Care Education Workshops" loading="lazy">
+            </div>
+            <div class="project-caption">
+              <h3 class="font-heading">Child Care Education Workshops</h3>
+              <p>Educational sessions providing parents with essential knowledge about newborn care</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Team & Organization -->
+        <div class="project-card scroll-reveal" data-category="team">
+          <div class="project-header">
+            <h3 class="font-heading">EWEB Team & Organization</h3>
+            <p>Meet our dedicated team of healthcare professionals, advocates, and volunteers working together to empower women and families.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-cover gallery-item" data-type="image">
+              <img src="assets/images/Meet the Team.jpeg" alt="EWEB Team & Organization" loading="lazy">
+            </div>
+            <div class="project-caption">
+              <h3 class="font-heading">EWEB Team & Organization</h3>
+              <p>Meet our dedicated team of healthcare professionals and advocates</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Global Health Initiatives -->
+        <div class="project-card scroll-reveal" data-category="events">
+          <div class="project-header">
+            <h3 class="font-heading">Global Health Initiatives</h3>
+            <p>Our international programs bringing multilingual health education to underserved communities worldwide, breaking down barriers to healthcare access.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-cover gallery-item" data-type="image">
+              <img src="assets/images/global-program.jpg" alt="Global Health Initiatives" loading="lazy">
+            </div>
+            <div class="project-caption">
+              <h3 class="font-heading">Global Health Initiatives</h3>
+              <p>Multilingual health education to underserved communities worldwide</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Community Outreach -->
+        <div class="project-card scroll-reveal" data-category="community">
+          <div class="project-header">
+            <h3 class="font-heading">Community Outreach Programs</h3>
+            <p>Local initiatives connecting with families, providing support, resources, and building strong community networks for maternal and child health.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-cover gallery-item" data-type="image">
+              <img src="assets/images/hero-bg.jpg" alt="Community Outreach Programs" loading="lazy">
+            </div>
+            <div class="project-caption">
+              <h3 class="font-heading">Community Outreach Programs</h3>
+              <p>Connecting with families and building strong community networks</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Educational Videos & Webinars -->
+        <div class="project-card scroll-reveal" data-category="video">
+          <div class="project-header">
+            <h3 class="font-heading">Educational Videos & Webinars</h3>
+            <p>Recorded educational sessions and expert-led webinars covering various topics in maternal and child health, accessible anytime, anywhere.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-cover gallery-item" data-type="video" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+              <img src="assets/images/webinar-thumbnail.jpg" alt="Educational Videos & Webinars" loading="lazy">
+              <div class="play-icon">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="project-caption">
+              <h3 class="font-heading">Educational Videos & Webinars</h3>
+              <p>Recorded educational sessions and expert-led webinars</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close" id="lightbox-close">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="lightbox-nav lightbox-prev" id="lightbox-prev">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="lightbox-nav lightbox-next" id="lightbox-next">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="lightbox-content" id="lightbox-content">
+      <!-- Content will be inserted here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-20 pb-8">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="scroll-reveal">
+          <img src="assets/images/eweb-logo-white.png" alt="EWEB Logo" class="h-10 mb-6">
+          <p class="mb-6 text-white/70 text-sm tracking-wide leading-relaxed">
+            Empowering women through health education worldwide.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-all hover:-translate-y-1">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-all hover:-translate-y-1">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-all hover:-translate-y-1">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Home</a></li>
+            <li><a href="about.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">About Us</a></li>
+            <li><a href="programs.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Programs</a></li>
+            <li><a href="resources.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Resources</a></li>
+            <li><a href="gallery.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Gallery</a></li>
+            <li><a href="contact.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">info@eweb.org</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">(123) 456-7890</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">123 Health St, Suite 100<br>New York, NY 10001</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">Mon-Fri, 9am-5pm EST</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Newsletter</h4>
+          <p class="text-white/80 mb-4">
+            Subscribe for health tips and updates.
+          </p>
+          <form class="flex group">
+            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-dark focus:outline-none focus:ring-2 focus:ring-secondary transition-all">
+            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-4 rounded-r transition-all group-hover:shadow-lg">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60 text-sm">
+          &copy; 2023 Every Woman Every Baby Inc. All rights reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-white/60 hover:text-secondary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/60 hover:text-secondary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Gallery functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxContent = document.getElementById('lightbox-content');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+      
+      let currentItems = [];
+      let currentIndex = 0;
+
+      // Filter functionality - filter by project cards
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active button - ensure border line is visible
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.classList.remove('border-primary');
+            btn.classList.add('border-transparent');
+          });
+          this.classList.add('active');
+          this.classList.remove('border-transparent');
+          this.classList.add('border-primary');
+          
+          // Filter project cards
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'block';
+              card.style.opacity = '0';
+              setTimeout(() => {
+                card.style.opacity = '1';
+              }, 50);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Get all visible gallery items across all visible projects
+      function getAllVisibleItems() {
+        const visibleProjects = Array.from(projectCards).filter(card => 
+          card.style.display !== 'none' && window.getComputedStyle(card).display !== 'none'
+        );
+        
+        const allItems = [];
+        visibleProjects.forEach(project => {
+          const items = project.querySelectorAll('.gallery-item');
+          items.forEach(item => allItems.push(item));
+        });
+        
+        return allItems;
+      }
+
+      // Open lightbox
+      function openLightbox(item, index) {
+        currentItems = getAllVisibleItems();
+        currentIndex = index;
+        const type = item.getAttribute('data-type');
+        
+        if (type === 'video') {
+          const videoUrl = item.getAttribute('data-video');
+          lightboxContent.innerHTML = `<iframe width="800" height="450" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+          const img = item.querySelector('img');
+          lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+        }
+        
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Close lightbox
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        lightboxContent.innerHTML = '';
+      }
+
+      // Navigate lightbox
+      function navigateLightbox(direction) {
+        if (currentItems.length === 0) return;
+        
+        if (direction === 'next') {
+          currentIndex = (currentIndex + 1) % currentItems.length;
+        } else {
+          currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length;
+        }
+        
+        const item = currentItems[currentIndex];
+        const type = item.getAttribute('data-type');
+        
+        if (type === 'video') {
+          const videoUrl = item.getAttribute('data-video');
+          lightboxContent.innerHTML = `<iframe width="800" height="450" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+          const img = item.querySelector('img');
+          lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+        }
+      }
+
+      // Add click event to gallery items
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', function() {
+          const allVisibleItems = getAllVisibleItems();
+          const visibleIndex = allVisibleItems.indexOf(item);
+          openLightbox(item, visibleIndex);
+        });
+      });
+
+      // Lightbox controls
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', () => navigateLightbox('prev'));
+      lightboxNext.addEventListener('click', () => navigateLightbox('next'));
+
+      // Close on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft' && lightbox.classList.contains('active')) {
+          navigateLightbox('prev');
+        } else if (e.key === 'ArrowRight' && lightbox.classList.contains('active')) {
+          navigateLightbox('next');
+        }
+      });
+
+      // Close on background click
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

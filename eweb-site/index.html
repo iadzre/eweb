@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EWEB | Empowering Women, Supporting Families</title>
+  
+  <!-- Tailwind CSS via CDN (for development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#401F3E',
+            'primary-dark': '#2E162D',
+            secondary: '#95C623',
+            'secondary-dark': '#7CA61D',
+            accent: '#034748',
+            dark: '#002221',
+          },
+          fontFamily: {
+            sans: ['Open Sans', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/images/logo.svg" alt="EWEB Logo" class="h-10">
+      </a>
+      
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="about.html" class="text-dark hover:text-primary font-medium transition-colors">About</a>
+        <a href="programs.html" class="text-dark hover:text-primary font-medium transition-colors">Programs</a>
+        <a href="resources.html" class="text-dark hover:text-primary font-medium transition-colors">Resources</a>
+        <a href="get-involved.html" class="text-dark hover:text-primary font-medium transition-colors">Get Involved</a>
+        <a href="contact.html" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+        <a href="donate.html" class="ml-4 bg-secondary hover:bg-secondary-dark text-dark font-bold px-6 py-2 rounded-full transition-colors">Donate</a>
+      </nav>
+      
+      <button class="md:hidden text-2xl text-primary" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg">
+      <div class="flex flex-col space-y-4">
+        <a href="about.html" class="block py-2 hover:text-primary">About</a>
+        <a href="programs.html" class="block py-2 hover:text-primary">Programs</a>
+        <a href="resources.html" class="block py-2 hover:text-primary">Resources</a>
+        <a href="get-involved.html" class="block py-2 hover:text-primary">Get Involved</a>
+        <a href="contact.html" class="block py-2 hover:text-primary">Contact</a>
+        <a href="donate.html" class="mt-2 block bg-secondary text-dark font-bold py-2 px-4 rounded-full text-center">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-primary/90 bg-cover bg-center" style="background-image: url('assets/images/hero-bg.jpg')">
+    <div class="container mx-auto px-4 sm:px-6 text-center text-white">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        Empowering Women, <br>Supporting Families
+      </h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">
+        Evidence-based maternal health education for women and families worldwide.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="resources.html" class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-8 py-3 rounded-full transition-colors">
+          Explore Resources
+        </a>
+        <a href="get-involved.html" class="bg-white/10 hover:bg-white/20 border-2 border-white text-white font-bold px-8 py-3 rounded-full transition-colors">
+          Join Our Community
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-xl md:text-2xl text-gray-700 italic">
+          "At EWEB, we believe education is the foundation of healthy families. Founded by nurses, we provide accessible health knowledge to empower women at every stage."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
+        Our Programs
+        <span class="block mt-2 text-lg font-normal text-primary">Evidence-based support for every stage</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Program 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow hover:-translate-y-1">
+          <img src="assets/images/postpartum-program.jpg" alt="Postpartum health education" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mr-4">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="font-heading text-xl font-bold">Postpartum Health</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Comprehensive support for mothers navigating postpartum recovery and mental health challenges.</p>
+            <a href="programs.html#postpartum" class="inline-flex items-center text-primary font-semibold group">
+              Learn more <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Program 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow hover:-translate-y-1">
+          <img src="assets/images/childcare-program.jpg" alt="Child care education" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mr-4">
+                <i class="fas fa-baby"></i>
+              </div>
+              <h3 class="font-heading text-xl font-bold">Child Care</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Expert guidance on infant care, development milestones, and parenting strategies.</p>
+            <a href="programs.html#childcare" class="inline-flex items-center text-primary font-semibold group">
+              Learn more <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Program 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow hover:-translate-y-1">
+          <img src="assets/images/global-program.jpg" alt="Global outreach" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mr-4">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3 class="font-heading text-xl font-bold">Global Outreach</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Multilingual resources tailored for underserved communities worldwide.</p>
+            <a href="programs.html#global" class="inline-flex items-center text-primary font-semibold group">
+              Learn more <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-accent text-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
+        What Mothers Say
+      </h2>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-10">
+          <blockquote class="text-xl md:text-2xl italic mb-6">
+            "EWEB's postpartum resources helped me understand what I was experiencing when no one else explained it. I felt supported and educated during my most vulnerable time."
+          </blockquote>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-secondary mr-4 overflow-hidden">
+              <img src="assets/images/testimonial-1.jpg" alt="Sarah M." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="font-bold">Sarah M.</div>
+              <div class="text-white/80">New York</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
+            <span class="counter" data-target="50">0</span>K+
+          </div>
+          <div class="text-gray-600">Women Served Annually</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
+            <span class="counter" data-target="12">0</span>
+          </div>
+          <div class="text-gray-600">Languages</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
+            <span class="counter" data-target="15">0</span>
+          </div>
+          <div class="text-gray-600">Countries Reached</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
+            <span class="counter" data-target="100">0</span>%
+          </div>
+          <div class="text-gray-600">Free Resources</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-secondary text-dark">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">
+        Ready to Make a Difference?
+      </h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8">
+        Your support provides free health education to women and families worldwide.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="donate.html" class="bg-dark hover:bg-opacity-90 text-white font-bold px-8 py-3 rounded-full transition-colors">
+          Donate Now
+        </a>
+        <a href="get-involved.html" class="bg-white/90 hover:bg-white border-2 border-dark text-dark font-bold px-8 py-3 rounded-full transition-colors">
+          Volunteer
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-20 pb-8">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <img src="assets/images/logo-white.svg" alt="EWEB Logo" class="h-10 mb-6">
+          <p class="mb-6 text-white/70">
+            Empowering women through health education worldwide.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-white/80 hover:text-secondary transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-white/80 hover:text-secondary transition-colors">About Us</a></li>
+            <li><a href="programs.html" class="text-white/80 hover:text-secondary transition-colors">Programs</a></li>
+            <li><a href="resources.html" class="text-white/80 hover:text-secondary transition-colors">Resources</a></li>
+            <li><a href="get-involved.html" class="text-white/80 hover:text-secondary transition-colors">Get Involved</a></li>
+            <li><a href="contact.html" class="text-white/80 hover:text-secondary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">info@eweb.org</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">(123) 456-7890</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">123 Health St, Suite 100<br>New York, NY 10001</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">Mon-Fri, 9am-5pm EST</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-lg mb-4">Newsletter</h4>
+          <p class="text-white/80 mb-4">
+            Subscribe for health tips and updates.
+          </p>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-dark focus:outline-none focus:ring-2 focus:ring-secondary">
+            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-4 rounded-r transition-colors">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60">
+          &copy; 2023 Every Woman Every Baby Inc. All rights reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-white/60 hover:text-secondary transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/60 hover:text-secondary transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = this.querySelector('i');
+      
+      menu.classList.toggle('hidden');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Counter Animation
+    const animateCounter = (element, target, duration = 2000) => {
+      let start = 0;
+      const increment = target / (duration / 16); // 60fps
+      
+      const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+          element.textContent = Math.floor(start);
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = target;
+        }
+      };
+      
+      updateCounter();
+    };
+
+    // Intersection Observer for counter animation
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          animateCounter(counter, target);
+          observer.unobserve(counter); // Stop observing after animation
+        }
+      });
+    }, observerOptions);
+
+    // Start observing all counters
+    document.querySelectorAll('.counter').forEach(counter => {
+      observer.observe(counter);
+    });
+  </script>
+</body>
+</html> 

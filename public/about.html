@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | EWEB</title>
+  
+  <!-- Tailwind CSS via CDN (for development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+  <!-- Header -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/images/eweb-logo.png" alt="EWEB Logo" class="h-10 transition-transform group-hover:scale-105">
+      </a>
+      
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="about.html" class="text-dark hover:text-secondary font-medium transition-colors">About</a>
+        <a href="programs.html" class="text-dark hover:text-secondary font-medium transition-colors">Programs</a>
+        <a href="resources.html" class="text-dark hover:text-secondary font-medium transition-colors">Resources</a>
+        <a href="gallery.html" class="text-dark hover:text-secondary font-medium transition-colors">Gallery</a>
+        <a href="contact.html" class="text-dark hover:text-secondary font-medium transition-colors">Contact</a>
+        <a href="get-involved.html#donate" class="ml-4 bg-secondary hover:bg-secondary-dark text-dark font-semibold px-6 py-2 rounded-full text-sm tracking-wide transition-all hover:shadow-lg">Donate</a>
+      </nav>
+      
+      <button class="md:hidden text-2xl text-primary" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg">
+      <div class="flex flex-col space-y-4">
+        <a href="about.html" class="block py-2 hover:text-secondary">About</a>
+        <a href="programs.html" class="block py-2 hover:text-secondary">Programs</a>
+        <a href="resources.html" class="block py-2 hover:text-secondary">Resources</a>
+        <a href="gallery.html" class="block py-2 hover:text-secondary">Gallery</a>
+        <a href="contact.html" class="block py-2 hover:text-secondary">Contact</a>
+        <a href="get-involved.html#donate" class="mt-2 block bg-secondary text-dark font-bold py-2 px-4 rounded-full text-center">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-primary/90 bg-cover bg-center overflow-hidden" style="background-image: url('assets/images/hero-bg.jpg')">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90"></div>
+    <div class="container mx-auto px-4 sm:px-6 text-center text-white relative z-10">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance scroll-reveal">
+        About Every Woman Every Baby
+      </h1>
+      <p class="text-lg max-w-2xl mx-auto tracking-wide text-white/90 scroll-reveal">
+        Our mission to empower women through health education
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading text-3xl font-bold mb-8 tracking-wide scroll-reveal">Our Mission</h2>
+        <p class="text-lg text-gray-700 mb-12 leading-relaxed scroll-reveal">
+          EWEB's mission is to empower women and families by providing accessible, evidence-based health education focused on maternal and child health. Founded by registered nurses, EWEB is dedicated to improving women's health outcomes through knowledge-sharing, advocacy, and multilingual educational outreach—locally and globally.
+        </p>
+        
+        <h2 class="font-heading text-3xl font-bold mb-8 tracking-wide scroll-reveal">Our Vision</h2>
+        <p class="text-lg text-gray-700 mb-12 leading-relaxed scroll-reveal">
+          Our vision is a future where every woman and child, regardless of their background, has access to the knowledge and resources they need to thrive. We envision a world where health education helps prevent illness, supports well-being, and enables individuals to make informed decisions about their care.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading text-3xl font-bold mb-8 tracking-wide scroll-reveal">Our Story</h2>
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed scroll-reveal">
+          Every Woman Every Baby Inc. (EWEB) is a non-profit organization founded by three dedicated registered nurses with a shared mission: to advance women's health through education, empowerment, and accessibility.
+        </p>
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed scroll-reveal">
+          At EWEB, we believe that informed women are the foundation of healthy families and thriving communities. Our work centers on delivering accurate, culturally respectful health education to women across the globe—with a special focus on underserved populations.
+        </p>
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed scroll-reveal">
+          By creating and sharing educational resources in local languages, we aim to break down barriers to health literacy and ensure every woman has the knowledge she needs to make informed decisions for herself and her family.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl font-bold text-center mb-10 tracking-wide scroll-reveal">
+        Meet the Team
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <!-- Team Member 1 -->
+        <div class="scroll-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+          <div class="relative aspect-[4/5]">
+            <img src="assets/images/Meet the Team.jpeg" alt="Margaret (Meg) Honutse" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fas fa-envelope text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-white">
+            <h3 class="font-heading text-xl font-bold mb-2 tracking-wide text-center">Margaret (Meg) Honutse</h3>
+            <p class="text-primary font-medium mb-3 text-center">Co-Founder & Registered Nurse</p>
+            <p class="text-gray-600 text-center">Co-founder and a registered nurse with a passion for healthcare, advocacy, and community support. Now in information security, she remains dedicated to empowering women and children through creative, impactful programs.</p>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="scroll-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+          <div class="relative aspect-[4/5]">
+            <img src="assets/images/Meet the Team 2.jpeg" alt="Madina Zamani" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fas fa-envelope text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-white">
+            <h3 class="font-heading text-xl font-bold mb-2 tracking-wide text-center">Madina Zamani</h3>
+            <p class="text-primary font-medium mb-3 text-center">Co-Founder & Registered Nurse</p>
+            <p class="text-gray-600 text-center">Co-founder and a registered nurse and passionate advocate for maternal and newborn health. She leads inclusive, community-focused initiatives with empathy and dedication, while also enjoying life as a mother and lifelong learner.</p>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="scroll-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+          <div class="relative aspect-[4/5]">
+            <img src="assets/images/Meet the Team 3ii.jpeg" alt="Samira Amadou" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fas fa-envelope text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-white">
+            <h3 class="font-heading text-xl font-bold mb-2 tracking-wide text-center">Samira Amadou</h3>
+            <p class="text-primary font-medium mb-3 text-center">Co-Founder & Postpartum Registered Nurse</p>
+            <p class="text-gray-600 text-center">A postpartum nurse passionate about maternal and newborn care. She leads community-focused programs and advocates for equitable access to health resources, while enjoying family life, travel, and global cuisine.</p>
+          </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="scroll-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+          <div class="relative aspect-[4/5]">
+            <img src="assets/images/Meet the Team 4.jpeg" alt="Ira Emefa Honutse" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fas fa-envelope text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-white">
+            <h3 class="font-heading text-xl font-bold mb-2 tracking-wide text-center">Ira Emefa Honutse</h3>
+            <p class="text-primary font-medium mb-3 text-center">Communications And Marketing Professional</p>
+            <p class="text-gray-600 text-center">A communications expert with over a decade of experience. She's passionate about women's empowerment, leads strategic engagement efforts, and balances her work with motherhood and continuous learning.</p>
+          </div>
+        </div>
+
+        <!-- Team Member 5 -->
+        <div class="scroll-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+          <div class="relative aspect-[4/5]">
+            <img src="assets/images/Meet the Team 5.jpeg" alt="Esther Bimpeh" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fas fa-envelope text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-white">
+            <h3 class="font-heading text-xl font-bold mb-2 tracking-wide text-center">Esther Bimpeh</h3>
+            <p class="text-primary font-medium mb-3 text-center">Head Of Operations</p>
+            <p class="text-gray-600 text-center">A dedicated mother and advocate for women and children. With a background in education and nonprofit leadership, she also leads the Every Soul Foundation and champions community support and empowerment.</p>
+          </div>
+        </div>
+
+        <!-- Team Member 6 -->
+        <div class="scroll-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+          <div class="relative aspect-[4/5]">
+            <img src="assets/images/Meet the Team 6.jpg" alt="Elikplim (Eli) Adzre" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition-colors transform hover:scale-110">
+                  <i class="fas fa-envelope text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-white">
+            <h3 class="font-heading text-xl font-bold mb-2 tracking-wide text-center">Elikplim (Eli) Adzre</h3>
+            <p class="text-primary font-medium mb-3 text-center">Creative Social Media Strategist And Content Creator</p>
+            <p class="text-gray-600 text-center">A creative social media strategist and content creator who uses design and storytelling to amplify EWEB's mission. With 5+ years of experience, he drives engagement and growth through impactful digital content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="py-24 bg-accent text-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-16 tracking-tight scroll-reveal">
+        Our Impact
+      </h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center scroll-reveal">
+          <div class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="counter" data-target="10000">0</span>+
+          </div>
+          <div class="text-white/80">Families Reached</div>
+        </div>
+        
+        <div class="text-center scroll-reveal">
+          <div class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="counter" data-target="15">0</span>
+          </div>
+          <div class="text-white/80">Languages</div>
+        </div>
+        
+        <div class="text-center scroll-reveal">
+          <div class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="counter" data-target="25">0</span>+
+          </div>
+          <div class="text-white/80">Countries</div>
+        </div>
+        
+        <div class="text-center scroll-reveal">
+          <div class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="counter" data-target="500">0</span>+
+          </div>
+          <div class="text-white/80">Workshops Held</div>
+        </div>
+      </div>
+      
+      <div class="max-w-3xl mx-auto mt-16 text-center scroll-reveal">
+        <blockquote class="text-xl italic">
+          "Whether we're hosting community workshops, developing digital content, or partnering with local leaders in developing countries, our approach is grounded in compassion, professionalism, and respect for every woman's unique journey."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-secondary text-dark">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6 tracking-tight scroll-reveal">
+        Join Our Mission
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto mb-8 tracking-wide scroll-reveal">
+        Together, we're building a world where health education is a right, not a privilege.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 scroll-reveal">
+        <a href="get-involved.html#donate" class="bg-gradient-to-r from-secondary to-secondary-dark hover:from-secondary-dark hover:to-secondary text-dark font-bold px-8 py-3 rounded-full transition-all hover:shadow-xl hover:-translate-y-2 border-2 border-dark/10 hover:border-dark/20 shadow-lg text-sm">
+          Donate Now
+        </a>
+        <a href="get-involved.html" class="bg-gradient-to-r from-white/90 to-white hover:from-white hover:to-white border-2 border-dark text-dark font-bold px-8 py-3 rounded-full transition-all hover:shadow-xl hover:-translate-y-2 shadow-lg text-sm">
+          Volunteer
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-20 pb-8">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="scroll-reveal">
+          <img src="assets/images/eweb-logo-white.png" alt="EWEB Logo" class="h-10 mb-6">
+          <p class="mb-6 text-white/70 text-sm tracking-wide leading-relaxed">
+            Empowering women through health education worldwide.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-all hover:-translate-y-1">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-all hover:-translate-y-1">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-all hover:-translate-y-1">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Home</a></li>
+            <li><a href="about.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">About Us</a></li>
+            <li><a href="programs.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Programs</a></li>
+            <li><a href="resources.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Resources</a></li>
+            <li><a href="get-involved.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Get Involved</a></li>
+            <li><a href="contact.html" class="text-white/80 hover:text-secondary transition-colors inline-block hover:-translate-x-1">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">info@eweb.org</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">(123) 456-7890</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">123 Health St, Suite 100<br>New York, NY 10001</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock mt-1 mr-3 text-secondary"></i>
+              <span class="text-white/80">Mon-Fri, 9am-5pm EST</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="scroll-reveal">
+          <h4 class="font-heading font-bold text-lg mb-4">Newsletter</h4>
+          <p class="text-white/80 mb-4">
+            Subscribe for health tips and updates.
+          </p>
+          <form class="flex group">
+            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-dark focus:outline-none focus:ring-2 focus:ring-secondary transition-all">
+            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-4 rounded-r transition-all group-hover:shadow-lg">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60 text-sm">
+          &copy; 2023 Every Woman Every Baby Inc. All rights reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-white/60 hover:text-secondary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/60 hover:text-secondary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

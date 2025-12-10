@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EWEB - Empowering women through health education worldwide. Free, evidence-based maternal health resources for women and families.">
+  <meta name="keywords" content="women's health, maternal health, postpartum support, child care education, health education">
+  <title>EWEB | Empowering Women, Supporting Families</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/images/eweb-logo.png" as="image">
+  <link rel="preload" href="assets/images/hero-bg.jpg" as="image">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" as="style">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+      <a href="/" class="flex items-center" aria-label="EWEB Home">
+        <img src="assets/images/eweb-logo.png" 
+             alt="EWEB Logo" 
+             class="h-10"
+             onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiM0MDFGNEUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiI+RVdFQjwvdGV4dD48L3N2Zz4='; this.classList.add('image-error');">
+      </a>
+      
+      <nav class="hidden md:flex space-x-8 items-center" aria-label="Main navigation">
+        <a href="public/about.html" class="text-dark hover:text-primary font-medium transition-colors">About</a>
+        <a href="public/programs.html" class="text-dark hover:text-primary font-medium transition-colors">Programs</a>
+        <a href="public/resources.html" class="text-dark hover:text-primary font-medium transition-colors">Resources</a>
+        <a href="public/contact.html" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+        <a href="public/get-involved.html" class="ml-4 bg-secondary hover:bg-secondary-dark text-dark font-bold px-6 py-2 rounded-full transition-colors">Donate</a>
+      </nav>
+      
+      <button class="md:hidden text-2xl text-primary" id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg" aria-label="Mobile navigation">
+      <div class="flex flex-col space-y-4">
+        <a href="public/about.html" class="block py-2 hover:text-primary">About</a>
+        <a href="public/programs.html" class="block py-2 hover:text-primary">Programs</a>
+        <a href="public/resources.html" class="block py-2 hover:text-primary">Resources</a>
+        <a href="public/contact.html" class="block py-2 hover:text-primary">Contact</a>
+        <a href="public/get-involved.html" class="mt-2 block bg-secondary text-dark font-bold py-2 px-4 rounded-full text-center">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-primary/90 bg-cover bg-center" style="background-image: url('public/assets/images/hero-bg.jpg')">
+    <div class="container mx-auto px-4 sm:px-6 text-center text-white">
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        Empowering Women Through Health Education
+      </h1>
+      <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-8">
+        Free, evidence-based maternal health resources for women and families worldwide.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="public/resources.html" class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-8 py-3 rounded-full transition-colors">
+          Get Started
+        </a>
+        <a href="public/get-involved.html" class="bg-white/10 hover:bg-white/20 border-2 border-white text-white font-bold px-8 py-3 rounded-full transition-colors">
+          Support Our Mission
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
+        Our Impact
+        <span class="block mt-2 text-lg font-normal text-primary">Supporting women at every stage</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Program 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow hover:-translate-y-1">
+          <div class="w-full h-48 loading">
+            <img src="assets/images/postpartum-program.jpg" 
+                 alt="Postpartum health education" 
+                 class="w-full h-48 object-cover"
+                 onerror="this.parentElement.classList.remove('loading'); this.parentElement.classList.add('image-error'); this.parentElement.innerHTML='<i class=\'fas fa-image text-4xl text-gray-400\'></i><p class=\'text-gray-500 mt-2\'>Image not available</p>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold mb-3">Postpartum Support</h3>
+            <p class="text-gray-600 mb-4">Comprehensive resources for postpartum recovery and mental health.</p>
+            <a href="/programs#postpartum" class="text-primary font-semibold hover:text-primary-dark transition-colors">Learn more →</a>
+          </div>
+        </div>
+        
+        <!-- Program 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow hover:-translate-y-1">
+          <div class="w-full h-48 loading">
+            <img src="assets/images/childcare-program.jpg" 
+                 alt="Child care education" 
+                 class="w-full h-48 object-cover"
+                 onerror="this.parentElement.classList.remove('loading'); this.parentElement.classList.add('image-error'); this.parentElement.innerHTML='<i class=\'fas fa-image text-4xl text-gray-400\'></i><p class=\'text-gray-500 mt-2\'>Image not available</p>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold mb-3">Child Care Education</h3>
+            <p class="text-gray-600 mb-4">Expert guidance on infant care and development.</p>
+            <a href="/programs#childcare" class="text-primary font-semibold hover:text-primary-dark transition-colors">Learn more →</a>
+          </div>
+        </div>
+        
+        <!-- Program 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow hover:-translate-y-1">
+          <div class="w-full h-48 loading">
+            <img src="assets/images/global-program.jpg" 
+                 alt="Global outreach" 
+                 class="w-full h-48 object-cover"
+                 onerror="this.parentElement.classList.remove('loading'); this.parentElement.classList.add('image-error'); this.parentElement.innerHTML='<i class=\'fas fa-image text-4xl text-gray-400\'></i><p class=\'text-gray-500 mt-2\'>Image not available</p>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl font-bold mb-3">Global Resources</h3>
+            <p class="text-gray-600 mb-4">Multilingual support for communities worldwide.</p>
+            <a href="/programs#global" class="text-primary font-semibold hover:text-primary-dark transition-colors">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-accent text-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
+        Stories of Impact
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+          <blockquote class="text-lg italic mb-6">
+            "EWEB's postpartum resources helped me understand what I was experiencing when no one else explained it."
+          </blockquote>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-secondary mr-4 overflow-hidden loading">
+              <img src="public/assets/images/team-member1.jpg" 
+                   alt="Sarah M." 
+                   class="w-full h-full object-cover"
+                   onerror="this.parentElement.classList.remove('loading'); this.parentElement.classList.add('image-error'); this.parentElement.innerHTML='<i class=\'fas fa-user text-2xl\'></i>';">
+            </div>
+            <div>
+              <div class="font-bold">Sarah M.</div>
+              <div class="text-white/80">New York</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+          <blockquote class="text-lg italic mb-6">
+            "The child care guides gave me confidence as a first-time mother. I'm so grateful for this resource."
+          </blockquote>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-secondary mr-4 overflow-hidden loading">
+              <img src="public/assets/images/team-member2.jpg" 
+                   alt="Maria L." 
+                   class="w-full h-full object-cover"
+                   onerror="this.parentElement.classList.remove('loading'); this.parentElement.classList.add('image-error'); this.parentElement.innerHTML='<i class=\'fas fa-user text-2xl\'></i>';">
+            </div>
+            <div>
+              <div class="font-bold">Maria L.</div>
+              <div class="text-white/80">California</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white stats-section">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2" data-count="50">50K+</div>
+          <div class="text-gray-600">Women Served</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2" data-count="12">12</div>
+          <div class="text-gray-600">Languages</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2" data-count="15">15</div>
+          <div class="text-gray-600">Countries</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2" data-count="100">100%</div>
+          <div class="text-gray-600">Free Access</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-secondary text-dark">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">
+        Support Our Mission
+      </h2>
+      <p class="text-xl max-w-xl mx-auto mb-8">
+        Help us provide free health education to more women and families worldwide.
+      </p>
+      <a href="/donate" class="inline-block bg-dark hover:bg-opacity-90 text-white font-bold px-8 py-3 rounded-full transition-colors">
+        Donate Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <img src="assets/images/eweb-logo-white.png" 
+               alt="EWEB Logo" 
+               class="h-10 mb-4"
+               onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiM5NUM2MjMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiI+RVdFQjwvdGV4dD48L3N2Zz4='; this.classList.add('image-error');">
+          <p class="mb-4 text-white/80">
+            Empowering women through health education worldwide.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-colors" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-colors" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-dark transition-colors" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-white/80 hover:text-secondary transition-colors">Home</a></li>
+            <li><a href="public/about.html" class="text-white/80 hover:text-secondary transition-colors">About Us</a></li>
+            <li><a href="public/programs.html" class="text-white/80 hover:text-secondary transition-colors">Programs</a></li>
+            <li><a href="public/resources.html" class="text-white/80 hover:text-secondary transition-colors">Resources</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+              <a href="mailto:info@eweb.org" class="text-white/80 hover:text-secondary transition-colors">info@eweb.org</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3 text-secondary"></i>
+              <a href="tel:+11234567890" class="text-white/80 hover:text-secondary transition-colors">(123) 456-7890</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+              <address class="text-white/80 not-italic">
+                123 Health St, Suite 100<br>
+                New York, NY 10001
+              </address>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-lg mb-4">Newsletter</h4>
+          <p class="text-white/80 mb-4">
+            Subscribe for health tips and updates.
+          </p>
+          <form class="flex" onsubmit="return false;">
+            <input type="email" 
+                   placeholder="Your email" 
+                   class="px-4 py-2 w-full rounded-l text-dark focus:outline-none"
+                   required
+                   aria-label="Email for newsletter">
+            <button type="submit" 
+                    class="bg-secondary hover:bg-secondary-dark text-dark font-bold px-4 rounded-r"
+                    aria-label="Subscribe to newsletter">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60 text-sm">
+          &copy; 2023 Every Woman Every Baby Inc. All rights reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="public/privacy.html" class="text-white/60 hover:text-secondary text-sm transition-colors">Privacy Policy</a>
+          <a href="public/terms.html" class="text-white/60 hover:text-secondary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
