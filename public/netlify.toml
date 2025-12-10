@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+
+# Redirect 404s to index.html (optional - only if you want a fallback)
+# For a multi-page static site, you typically don't need this redirect
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 404
