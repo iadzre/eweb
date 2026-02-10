@@ -1,0 +1,124 @@
+# Netlify CMS config for EWEB – Every Woman Every Baby
+# Docs: https://decapcms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Uploaded images go here (path in repo). Served at public_folder URL.
+media_folder: "public/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Optional: use local_backend for local dev with netlify-cms-proxy-server
+# local_backend: true
+
+locale: "en"
+
+collections:
+  # ─── Site settings (home hero, mission, etc.) ───
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "General"
+        file: "public/content/settings.json"
+        fields:
+          - { label: "Site title", name: "site_title", widget: "string", default: "EWEB - Every Woman Every Baby" }
+          - { label: "Hero heading", name: "hero_heading", widget: "string" }
+          - { label: "Hero subheading", name: "hero_subheading", widget: "text" }
+          - { label: "Mission statement (home)", name: "mission_statement", widget: "text" }
+          - { label: "Primary CTA label", name: "cta_primary_label", widget: "string" }
+          - { label: "Secondary CTA label", name: "cta_secondary_label", widget: "string" }
+
+  # ─── About page (mission, vision, story) ───
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About content"
+        file: "public/content/about.json"
+        fields:
+          - { label: "Page title", name: "page_title", widget: "string" }
+          - { label: "Hero subtitle", name: "hero_subtitle", widget: "string" }
+          - { label: "Mission heading", name: "mission_heading", widget: "string" }
+          - { label: "Mission text", name: "mission_text", widget: "markdown" }
+          - { label: "Vision heading", name: "vision_heading", widget: "string" }
+          - { label: "Vision text", name: "vision_text", widget: "markdown" }
+          - { label: "Story heading", name: "story_heading", widget: "string" }
+          - { label: "Story paragraphs", name: "story_paragraphs", widget: "list", summary: "{{fields.text}}", fields:
+              - { label: "Paragraph", name: "text", widget: "markdown" } }
+
+  # ─── Team members ───
+  - name: "team"
+    label: "Team"
+    folder: "public/content/team"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role / title", name: "role", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image", required: false }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+      - { label: "Twitter URL", name: "twitter", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Order (number, lower first)", name: "order", widget: "number", value_type: "int", default: 0 }
+
+  # ─── Programs ───
+  - name: "programs"
+    label: "Programs"
+    folder: "public/content/programs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Tag (e.g. Postpartum Health)", name: "tag", widget: "string", required: false }
+      - { label: "Anchor ID (e.g. postpartum)", name: "anchor", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", default: 0 }
+
+  # ─── Resources ───
+  - name: "resources"
+    label: "Resources"
+    folder: "public/content/resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Category", name: "category", widget: "select", options: ["postpartum", "childcare", "multilingual", "workshops", "other"] }
+      - { label: "Format (e.g. PDF Guide)", name: "format", widget: "string", required: false }
+      - { label: "Details (e.g. 28 pages, English)", name: "details", widget: "string", required: false }
+      - { label: "Link URL", name: "url", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", default: 0 }
+
+  # ─── Donation impact (Get Involved) ───
+  - name: "donation_impact"
+    label: "Donation Impact"
+    files:
+      - name: "donation_impact"
+        label: "Impact cards"
+        file: "public/content/donation-impact.json"
+        fields:
+          - label: "Impact cards"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.amount}} – {{fields.description}}"
+            fields:
+              - { label: "Amount ($)", name: "amount", widget: "number", value_type: "int" }
+              - { label: "Description", name: "description", widget: "string" }
+
+  # ─── Gallery ───
+  - name: "gallery"
+    label: "Gallery"
+    folder: "public/content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", default: 0 }

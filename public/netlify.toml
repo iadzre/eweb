@@ -1,8 +1,11 @@
 [build]
   publish = "public"
 
-# Redirect 404s to index.html (optional - only if you want a fallback)
-# For a multi-page static site, you typically don't need this redirect
+# Netlify CMS: enable Identity + Git Gateway in Netlify dashboard:
+# Site settings → Identity → Enable; Services → Git Gateway → Enable
+# Then invite users and they can log in at /admin
+
+# Redirect 404s to index.html (optional)
 # [[redirects]]
 #   from = "/*"
 #   to = "/index.html"

@@ -1,0 +1,7 @@
+{
+  "cards": [
+    { "amount": 25, "description": "Provides a postpartum health guide to 5 mothers" },
+    { "amount": 50, "description": "Funds a community health workshop" },
+    { "amount": 100, "description": "Supports translation of materials into a new language" }
+  ]
+}
