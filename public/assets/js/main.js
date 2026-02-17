@@ -1,16 +1,26 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuButton = document.getElementById('mobile-menu-button');
-  if (mobileMenuButton) {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
       const icon = this.querySelector('i');
-      
-      if (menu && icon) {
-        menu.classList.toggle('hidden');
+      if (icon) {
+        mobileMenu.classList.toggle('hidden');
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-times');
       }
+    });
+    // Close menu when a nav link is clicked (better UX before navigation)
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileMenuButton.querySelector('i');
+        if (icon) {
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
+        }
+      });
     });
   }
 });
@@ -90,7 +100,7 @@ document.querySelectorAll('.hover-lift').forEach(card => {
   });
 }); 
 
-// Tab Switching Functionality
+// Tab Switching Functionality (only when .tab-content panels exist, e.g. Get Involved page)
 document.addEventListener('DOMContentLoaded', function() {
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
@@ -98,20 +108,15 @@ document.addEventListener('DOMContentLoaded', function() {
   if (tabButtons.length > 0 && tabContents.length > 0) {
     tabButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Remove active class from all buttons and contents
         tabButtons.forEach(btn => {
           btn.classList.remove('active', 'text-primary', 'border-primary');
           btn.classList.add('text-gray-500', 'border-transparent');
         });
         tabContents.forEach(content => content.classList.add('hidden'));
-
-        // Add active class to clicked button
         button.classList.add('active', 'text-primary', 'border-primary');
         button.classList.remove('text-gray-500', 'border-transparent');
-
-        // Show corresponding content
         const tabId = button.getAttribute('data-tab');
-        const targetTab = document.getElementById(`${tabId}-tab`);
+        const targetTab = document.getElementById(tabId + '-tab');
         if (targetTab) {
           targetTab.classList.remove('hidden');
         }
