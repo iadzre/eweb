@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>EWEB – Content Admin</title>
+  <!-- Identity must load before CMS so login works -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- Pinned version for stability; config loads from /admin/config.yml -->
+  <script src="https://unpkg.com/netlify-cms@2.10.199/dist/netlify-cms.js"></script>
 </body>
 </html>

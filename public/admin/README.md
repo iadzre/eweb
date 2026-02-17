@@ -36,3 +36,20 @@ Content is stored in `public/content/` as JSON or Markdown. To render it:
 - **Option B** – In your own JS, fetch `/content/settings.json` (or other files) and update the DOM.
 
 After you save in the CMS, changes are committed to your repo and the next deploy will serve the updated content.
+
+## Troubleshooting
+
+- **"Failed to load config.yml" (404)**  
+  Ensure the admin is opened as `https://yoursite.com/admin/` (with trailing slash). The redirect in `netlify.toml` sends `/admin` → `/admin/` so the CMS can find `config.yml`.
+
+- **Login / Identity not working**  
+  Enable **Identity** and **Git Gateway** in the Netlify dashboard. Invite at least one user; they must accept the invite and set a password before logging in at `/admin`.
+
+- **Wrong branch**  
+  If your repo default branch is `master`, edit `admin/config.yml` and set `backend.branch: master`.
+
+- **Content or images not saving**  
+  Paths in the config are relative to the **Git repo root**. If your repo has no `public` folder (site files at repo root), change every `public/...` path in `config.yml` to remove the `public/` prefix (e.g. `content/settings.json`, `assets/images/uploads`).
+
+- **Local testing**  
+  Run a local server from the `public` folder (e.g. `npx serve public`) and open `http://localhost:3000/admin/`. You’ll see the login screen; actual save/publish requires Netlify (Identity + Git Gateway).

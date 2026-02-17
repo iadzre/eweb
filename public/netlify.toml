@@ -5,8 +5,9 @@
 # Site settings → Identity → Enable; Services → Git Gateway → Enable
 # Then invite users and they can log in at /admin
 
-# Redirect 404s to index.html (optional)
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 404
+# Ensure /admin works (no trailing slash -> with trailing slash so config loads)
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+  force = true

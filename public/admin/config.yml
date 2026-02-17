@@ -1,11 +1,14 @@
 # Netlify CMS config for EWEB – Every Woman Every Baby
 # Docs: https://decapcms.org/docs/configuration-options/
+# Paths are relative to repo root. If your repo root IS the site (no "public" folder),
+# change all "public/..." paths to remove the "public/" prefix.
 
 backend:
   name: git-gateway
   branch: main
+  # If your default branch is "master", change to: branch: master
 
-# Uploaded images go here (path in repo). Served at public_folder URL.
+# Uploaded images: path in repo (repo root = project root; publish dir = public).
 media_folder: "public/assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
@@ -45,8 +48,12 @@ collections:
           - { label: "Vision heading", name: "vision_heading", widget: "string" }
           - { label: "Vision text", name: "vision_text", widget: "markdown" }
           - { label: "Story heading", name: "story_heading", widget: "string" }
-          - { label: "Story paragraphs", name: "story_paragraphs", widget: "list", summary: "{{fields.text}}", fields:
-              - { label: "Paragraph", name: "text", widget: "markdown" } }
+          - label: "Story paragraphs"
+            name: "story_paragraphs"
+            widget: "list"
+            summary: "Paragraph"
+            fields:
+              - { label: "Paragraph", name: "text", widget: "markdown" }
 
   # ─── Team members ───
   - name: "team"
@@ -55,6 +62,8 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: "name"
+    # New files get a URL-safe slug from the title (e.g. "Jane Doe" -> jane-doe)
+    summary: "{{name}} – {{role}}"
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Role / title", name: "role", widget: "string" }
@@ -89,7 +98,15 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Category", name: "category", widget: "select", options: ["postpartum", "childcare", "multilingual", "workshops", "other"] }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Postpartum Health", value: "postpartum" }
+          - { label: "Child Care", value: "childcare" }
+          - { label: "Multilingual", value: "multilingual" }
+          - { label: "Workshop Recordings", value: "workshops" }
+          - { label: "Other", value: "other" }
       - { label: "Format (e.g. PDF Guide)", name: "format", widget: "string", required: false }
       - { label: "Details (e.g. 28 pages, English)", name: "details", widget: "string", required: false }
       - { label: "Link URL", name: "url", widget: "string", required: false }
